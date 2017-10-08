@@ -1,0 +1,19 @@
+open Graphics;;
+  
+  open_graph "540x400";;
+    set_color black;;
+  type point = { x : float; y: float };;
+  let rec dragon n p1 p2 = match n with
+    |1-> begin
+        moveto(int_of_float(p1.x) int_of_float(p1.y))
+              lineto (int_of_float(p2.x) int_of_float(p2.y))
+      end
+    |_ ->
+    
+      begin
+        dragon (n-1) p1  {x=(p1.x +. p2.x)/.2. +. (p2.y -. p1.y) /.2.; y=(p1.y +. p2.y)/.2. -. (p2.x -. p1.x) /.2.}
+      dragon {x=(p1.x +. p2.x)/.2. +. (p2.y -. p1.y) /.2.; y=(p1.y +. p2.y)/.2. -. (p2.x -. p1.x) /.2.} (n-1) 
+      end
+  ;;
+
+    dragon 20 {x=20.;y=20.} {x=220.;y=200};;

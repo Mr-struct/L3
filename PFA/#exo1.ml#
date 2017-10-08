@@ -1,0 +1,52 @@
+let l =[1;2;3;2;5;3;2];;
+let l2 = [[1];[];[3];[4]];;
+  let l3 = [1,2 ; 3,4 ; 5,6];;
+(*let affiche l =
+  List.iter (fun x -> Printf.printf "%d \n" x) l;;
+let list = [1;2;3;5];;
+  affiche list;;*)
+let rec count a l =
+  let rec aux a l2 acc =  match l2 with
+    |[]-> acc
+    |x::s -> if x = a then aux a s (acc+1) else aux a s acc
+  in
+  aux a l 0
+;;
+  count 2 l;;
+let cout2 a l =
+  List.fold_left (fun acc x -> if x = a then acc+1 else acc) 0 l;;
+  
+let rec flatten l = match l with
+  |[]-> []
+  
+  |x::s -> List.append x (flatten s)
+;;
+  flatten l2;;
+
+let flatte2 l =
+  List.fold_right (fun l1 l2 -> List.append l1 l2) l []
+;;
+  flatte2 l2;;
+
+let fst_list l = List.fold_right(fun (a,b) l-> a::l) l [];;
+fst_list l3;;
+type t = B|N|R;;
+  
+let permut t = List.fold_right (fun l a -> match l with
+                                         |B -> N::a
+                                         |N -> R::a
+                                         |_-> B::a
+                               ) t [];;
+let list_t = [B;R;N;B];;
+ permut list_t;;
+ let compt_B t = List.fold_right (fun l1 acc -> match l1 with
+                                                |B -> acc+1
+                                                |_ -> acc
+                                 )t 0;;
+   compt_B list_t;;
+   let plus_gs t = List.fold_right( fun l acc s ->
+                                    s = 0
+                                    match l with
+                                    |B -> acc+1
+                                    |_ -> if acc > s then begin s = acc ; acc = 0 end 0 ) l 0;;
+                                            
