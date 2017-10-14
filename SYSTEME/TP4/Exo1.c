@@ -2,14 +2,14 @@
 @autor : Sofiane BELMEHDI
 GitHub : https://github.com/Mr-struct/
 WebSite: http://mrstruct.000webhostapp.com/
-		#################################################################
-		#	Attention!!	je m'adresse aux petits malins 					#
-		#	ne copiez pas ce code pour votre tp de Systeme 				#
-		#	je le saurai alors évitez moi svp du travail en plus 	    #
-		#	Vous avez le droit de modifier ce code                      #
-		#	et de l'utiliser pour comprendre 							#
-		#	Merci! 													    #
-		#################################################################
+#################################################################
+#	Attention!!	je m'adresse aux petits malins 										#
+#	ne copiez pas ce code pour votre tp de Systeme 								#
+#	je le saurai alors évitez moi svp du travail en plus 	   		 	#
+#	Vous avez le droit de modifier ce code                      	#
+#	et de l'utiliser pour comprendre 															#
+#	Merci! 													    													#
+#################################################################
 Hack to learn don't learn to hack!
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------s
